@@ -1,2 +1,72 @@
-# flexipay-mobile-app
-Flexipay app with 4 screens: Login, Home, Send Money, and Transactions.
+# FlexiPay
+
+FlexiPay is a Flutter application designed to provide a seamless and intuitive way to manage your finances. The app currently features four main screens: Login, Wallet Balance, Send Money, and Transactions. The application is built using the MVVM (Model-View-ViewModel) architecture for a scalable and maintainable codebase.
+
+## Screenshots
+
+<p float="center">
+    <img src="screenshots/login.png" width="230">
+    <img src="screenshots/hide_balance.png" width="230">
+    <img src="screenshots/show_balance.png" width="230">
+</p>
+
+<p float="center">
+    <img src="screenshots/send_money.png" width="230">
+    <img src="screenshots/bottom_sheet.png" width="230">
+    <img src="screenshots/transactions.png" width="230">
+</p>
+
+![Class Diagram](screenshots/class_diagram.png) 
+*Class Diagram:* The Class Diagram illustrates the core components of the FlexiPay app, detailing user authentication, wallet management, and transaction processes.
+
+![Sequence Diagram](screenshots/sequence_diagram.png) 
+*Sequence Diagram:* The Sequence Diagram illustrates the interactions for key processes like login, viewing wallet balance, sending money, and viewing transaction history in the FlexiPay app.
+
+## Features
+
+- **Login Screen**: User authentication to ensure secure access.
+- **Wallet Balance Screen**: Displays the user's current wallet balance.
+- **Send Money Screen**: Allows users to transfer money easily.
+- **Transactions Screen**: Provides a detailed history of transactions.
+
+## Architecture
+
+FlexiPay is built using the MVVM (Model-View-ViewModel) architecture, which facilitates separation of concerns, modularity, and easy testing.
+
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+- Flutter SDK
+- Dart
+- Any IDE (VS Code, Android Studio)
+
+### Installation
+
+1. Clone the repo:
+    ```sh
+    git clone https://github.com/rajkumarganesan93/flexipay-mobile-app.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd FlexiPay
+    ```
+3. Install dependencies:
+    ```sh
+    flutter pub get
+    ```
+
+### Running the App
+
+1. Run the app:
+    ```sh
+    flutter run
+    ```
+
+## Contact
+
+Project Link: [https://github.com/rajkumarganesan93/flexipay-mobile-app.git](https://github.com/rajkumarganesan93/flexipay-mobile-app.git)
+
+Mock Data Link: [https://github.com/rajkumarganesan93/flexipay-mock-db.git](https://github.com/rajkumarganesan93/flexipay-mock-db.git)

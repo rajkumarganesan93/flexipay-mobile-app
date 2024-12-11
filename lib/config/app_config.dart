@@ -1,0 +1,3 @@
+class AppConfig {
+  //APPLICATION CONFIGS CAN BE ADDED HERE
+}
