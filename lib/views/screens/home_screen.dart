@@ -40,6 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
     try {
       String balance = await walletRepository.fetchWalletBalance();
       getCurrentUserData();
+      getCurrentUserData();
       setState(() {
         _walletBalance = balance;
       });
