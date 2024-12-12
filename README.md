@@ -98,9 +98,11 @@ To get a local copy up and running follow these simple steps.
 
 Use the following test credentials to log in to the app:
 
+1. Test User **Emma**
 - **Username**: `emma`
 - **Password**: `any_password`
 
+2. Test User **Jade**
 - **Username**: `jade`
 - **Password**: `any_password`
 
