@@ -25,13 +25,39 @@ FlexiPay is a Flutter application designed to provide a seamless and intuitive w
 ## Features
 
 - **Login Screen**: User authentication to ensure secure access.
-- **Wallet Balance Screen**: Displays the user's current wallet balance.
+- **Home Screen**: Displays the user's current wallet balance.
 - **Send Money Screen**: Allows users to transfer money easily.
 - **Transactions Screen**: Provides a detailed history of transactions.
 
 ## Architecture
 
 FlexiPay is built using the MVVM (Model-View-ViewModel) architecture, which facilitates separation of concerns, modularity, and easy testing.
+
+## MVVM Folder Structure
+
+The FlexiPay app follows the MVVM (Model-View-ViewModel) architecture for a scalable and maintainable codebase. Below is the folder structure:
+
+FlexiPay/ 
+├── lib/
+│ ├── config/
+│ ├── models/ 
+│ ├── repositories/ 
+│ ├── viewmodels/ 
+│ ├── views/ 
+│ │ ├── screens/ 
+│ │ └── widgets/ 
+│ └── main.dart
+├── README.md
+├── pubspec.yaml
+└── ...
+
+- **config/**: Contains configurable values.
+- **models/**: Contains data models. 
+- **repositories/**: Contains data access and repository classes. 
+- **viewmodels/**: Contains business logic and state management. 
+- **views/**: Contains UI components. 
+- **screens/**: Contains individual screens for the app. 
+- **widgets/**: Contains reusable UI components. This structure ensures a clear separation of concerns, making the app easier to manage and extend.
 
 ## Getting Started
 
