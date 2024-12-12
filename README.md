@@ -38,12 +38,13 @@ FlexiPay is built using the MVVM (Model-View-ViewModel) architecture, which faci
 
 The FlexiPay app follows the MVVM (Model-View-ViewModel) architecture for a scalable and maintainable codebase. Below is the folder structure:
 
-<div>
-FlexiPay/ 
+<p>
+flexipay-mobile-app/ 
 ├── lib/
 │ ├── config/
 │ ├── models/ 
 │ ├── repositories/ 
+│ ├── utils/
 │ ├── viewmodels/ 
 │ ├── views/ 
 │ │ ├── screens/ 
@@ -52,11 +53,12 @@ FlexiPay/
 ├── README.md
 ├── pubspec.yaml
 └── ...
-</div>
+</p>
 
 - **config/**: Contains configurable values.
 - **models/**: Contains data models. 
 - **repositories/**: Contains data access and repository classes. 
+- **utils/**: The utils folder contains common handlers for reusable functionality across the application..
 - **viewmodels/**: Contains business logic and state management. 
 - **views/**: Contains UI components. 
 - **screens/**: Contains individual screens for the app. 
@@ -80,7 +82,7 @@ To get a local copy up and running follow these simple steps.
     ```
 2. Navigate to the project directory:
     ```sh
-    cd FlexiPay
+    cd flexipay-mobile-app
     ```
 3. Install dependencies:
     ```sh
