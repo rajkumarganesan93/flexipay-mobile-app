@@ -49,7 +49,9 @@ The FlexiPay app follows the MVVM (Model-View-ViewModel) architecture for a scal
 - **viewmodels/**: Contains business logic and state management. 
 - **views/**: Contains UI components. 
 - **screens/**: Contains individual screens for the app. 
-- **widgets/**: Contains reusable UI components. This structure ensures a clear separation of concerns, making the app easier to manage and extend.
+- **widgets/**: Contains reusable UI components. 
+
+This structure ensures a clear separation of concerns, making the app easier to manage and extend.
 
 ## Getting Started
 
