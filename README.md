@@ -38,22 +38,7 @@ FlexiPay is built using the MVVM (Model-View-ViewModel) architecture, which faci
 
 The FlexiPay app follows the MVVM (Model-View-ViewModel) architecture for a scalable and maintainable codebase. Below is the folder structure:
 
-<p>
-flexipay-mobile-app/ 
-├── lib/
-│ ├── config/
-│ ├── models/ 
-│ ├── repositories/ 
-│ ├── utils/
-│ ├── viewmodels/ 
-│ ├── views/ 
-│ │ ├── screens/ 
-│ │ └── widgets/ 
-│ └── main.dart
-├── README.md
-├── pubspec.yaml
-└── ...
-</p>
+flexipay-mobile-app/ ├── lib/ │ ├── config/ │ ├── models/ │ ├── repositories/ │ ├── utils/ │ ├── viewmodels/ │ ├── views/ │ │ ├── screens/ │ │ └── widgets/ │ └── main.dart├── assets/ │ ├── images/ ├── pubspec.yaml├── README.md└── ...
 
 - **config/**: Contains configurable values.
 - **models/**: Contains data models. 
