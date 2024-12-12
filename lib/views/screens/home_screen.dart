@@ -23,6 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   String _walletBalance = "0.0";
   User? currentUserData;
   String firstName = "";
+  String accountNumber = "";
   final WalletRepository walletRepository = WalletRepository();
   final TransactionRepository transactionRepository = TransactionRepository();
   final OfflineRepository offlineRepository = OfflineRepository();
@@ -75,12 +76,14 @@ class _HomeScreenState extends State<HomeScreen> {
         currentUserData = tempUserData;
         if(tempUserData != null){
         firstName = tempUserData.firstName;
+        accountNumber = tempUserData.accountNumber;
         }
       });
     } catch (e) {
       setState(() {
         currentUserData = null;
         firstName = "";
+        accountNumber = "";
       });
     }
   }
@@ -91,7 +94,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Home"),
-        backgroundColor: Colors.green,
         actions: [
           // Logout button in AppBar
           LogoutButton()
@@ -124,7 +126,26 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 8),
+                    const Center(
+                      child: Text(
+                      "Account Number",
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )),
+                    Center(
+                      child: Text(
+                      accountNumber,
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )),
+                    const SizedBox(height: 8),
                     const Text(
                       "Wallet Balance",
                       style: TextStyle(

@@ -18,7 +18,6 @@ class SendMoneyScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Send Money'),
-        backgroundColor: Colors.green,
         actions: [
           LogoutButton()
         ],

@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Login Example',
+      title: 'Welcome to FlexiPay',
       theme: ThemeConfig.lightTheme,
       darkTheme: ThemeConfig.darkTheme,
       themeMode: ThemeMode.system,

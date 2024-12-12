@@ -18,6 +18,7 @@ LogoutButton({
   Widget build(BuildContext context) {
     return IconButton(
             icon: const Icon(Icons.logout),
+            color: Colors.white,
             onPressed: () {
               _logOut();
               // Navigate to LoginScreen when logout button is pressed

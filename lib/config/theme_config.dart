@@ -5,7 +5,10 @@ class ThemeConfig {
     primarySwatch: Colors.blue,
     scaffoldBackgroundColor: Colors.white,
     appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.blue,
+      iconTheme: IconThemeData(
+        color: Colors.white,
+      ),
+      backgroundColor: Colors.green,
       titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
     ),
     textTheme: const TextTheme(
@@ -18,6 +21,9 @@ class ThemeConfig {
     primarySwatch: Colors.blueGrey,
     scaffoldBackgroundColor: Colors.black,
     appBarTheme: const AppBarTheme(
+      iconTheme: IconThemeData(
+        color: Colors.white,
+      ),
       backgroundColor: Colors.blueGrey,
       titleTextStyle: TextStyle(color: Colors.white, fontSize: 20),
     ),

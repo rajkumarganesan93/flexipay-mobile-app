@@ -33,7 +33,6 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Transactions'),
-        backgroundColor: Colors.green,
         actions: [
           LogoutButton()
         ],
