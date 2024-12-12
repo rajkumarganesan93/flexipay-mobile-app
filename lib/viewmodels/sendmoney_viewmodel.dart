@@ -13,6 +13,8 @@ class SendMoneyViewModel extends ChangeNotifier {
   Transaction _transaction;
 
  SendMoneyViewModel(this._repository): _transaction = Transaction(
+   id: 0,
+   transactionId: 1,
    amount: '',
    description: '',
       transactionType: '',

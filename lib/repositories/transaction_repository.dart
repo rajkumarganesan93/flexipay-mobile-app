@@ -43,17 +43,36 @@ class TransactionRepository {
   // Simulate an API call for sending money
   Future<Transaction> sendMoney(double amount, String recipientName, String accountNumber) async {
     // Simulating a network request delay
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 1));
+
+    // Send data to API for transaction processing
+    final sendThisData = Transaction(
+      id:0,
+      accountNumber: accountNumber,
+      amount: amount.toString(),
+      description: 'Transfer to $recipientName',
+      recipientName: recipientName,
+      transactionDate: DateTime.now().toString().split(' ')[0],
+      transactionId: 0,
+      transactionType: 'Sent',
+      userId: "",
+    );
+
+    // Fake API used here; update to real API structure for integration.
+    final response = await _apiServices.sendRequest(MethodType.post, (ApiConfig.fetchTransactions), sendThisData.toJson());
 
     // Simulating a successful response, you can modify this according to the real API
     // Here we create a transaction mock response
+    final dynamic jsonData = jsonDecode(response.body);
     return Transaction(
-      amount: amount.toString(),
+      id: jsonData['id'],
+      transactionId: 1,
+      amount: jsonData['amount'].toString(),
       description: 'Transfer to $recipientName',
       transactionType: 'Sent',
       transactionDate: DateTime.now().toString().split(' ')[0],
-      recipientName: recipientName,
-      accountNumber: accountNumber,
+      recipientName: jsonData['recipientName'],
+      accountNumber: jsonData['accountNumber'],
       userId: "",
     );
   }
