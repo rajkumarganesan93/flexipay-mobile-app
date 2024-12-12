@@ -91,6 +91,13 @@ To get a local copy up and running follow these simple steps.
     flutter run
     ```
 
+### Test Credentials
+
+Use the following test credentials to log in to the app:
+
+- **Username**: `emma`
+- **Password**: `any_password`
+
 ## Contact
 
 Project Link: [https://github.com/rajkumarganesan93/flexipay-mobile-app.git](https://github.com/rajkumarganesan93/flexipay-mobile-app.git)
