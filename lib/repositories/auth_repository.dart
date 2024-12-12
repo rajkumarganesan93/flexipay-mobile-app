@@ -1,15 +1,17 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import '../utils/api_handler.dart';
 import '../models/user.dart';
 import '../config/api_config.dart';
 
 class AuthRepository {
+  final ApiHandler _apiServices = ApiHandler();
   Future<User?> login(String username, String password) async {
     // TODO: This is a temporary solution. User validation should be handled via the API.
     // Currently using fake APIs with GET method; will switch to POST for real APIs.
     // The code needs to be updated once the API validation is implemented and completed.
 
-    final response = await http.get(Uri.parse(ApiConfig.getUsers));
+    final response = await _apiServices.sendRequest(MethodType.get, ApiConfig.getUsers, {});
 
     if (response.statusCode == 200) {
       List<dynamic> users = json.decode(response.body);

@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import '../utils/api_handler.dart';
 import '../config/api_config.dart';
 import '../models/user.dart';
 import '../repositories/shared_preferences_repository.dart';
@@ -7,6 +8,7 @@ import '../repositories/offline_repository.dart';
 
 // Repository Class to fetch Wallet Balance
 class WalletRepository {
+  final ApiHandler _apiServices = ApiHandler();
   final SharedPreferencesRepository _sharedPreferencesRepository = SharedPreferencesRepository();
   final OfflineRepository _offlineRepository = OfflineRepository();
   // Function to fetch wallet balance from a fake API
@@ -22,8 +24,8 @@ class WalletRepository {
         throw Exception('Failed to load balance');
       }
 
-      // Example fake API URL
-      final response = await http.get(Uri.parse(ApiConfig.fetchWalletBalance + "?accountNumber=" + accountNumber));
+      // Fake API URL
+      final response = await _apiServices.sendRequest(MethodType.get, (ApiConfig.fetchWalletBalance + "?accountNumber=" + accountNumber), {});
 
       if (response.statusCode == 200) {
         // If the API returns a successful response

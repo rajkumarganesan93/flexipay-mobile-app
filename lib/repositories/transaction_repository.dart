@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import '../utils/api_handler.dart';
 import '../config/api_config.dart';
 import '../models/transaction.dart';
 import '../models/user.dart';
@@ -7,6 +8,7 @@ import '../repositories/shared_preferences_repository.dart';
 import '../repositories/offline_repository.dart';
 
 class TransactionRepository {
+  final ApiHandler _apiServices = ApiHandler();
   final SharedPreferencesRepository _sharedPreferencesRepository = SharedPreferencesRepository();
   final OfflineRepository _offlineRepository = OfflineRepository();
   Future<List<Transaction>> fetchTransactions() async {
@@ -21,8 +23,8 @@ class TransactionRepository {
         // If the current session has not Account Number
         throw Exception('Failed to fetching transactions');
       }
-
-      final response = await http.get(Uri.parse(ApiConfig.fetchTransactions + "?accountNumber=" + accountNumber));
+      //sendRequest(Method, Url, Body)
+      final response = await _apiServices.sendRequest(MethodType.get, (ApiConfig.fetchTransactions + "?accountNumber=" + accountNumber), {});
 
       if (response.statusCode == 200) {
         //Store transaction data in SharedPreferences;
