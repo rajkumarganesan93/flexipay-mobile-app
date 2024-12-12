@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../config/app_config.dart';
 import '../../viewmodels/login_viewmodel.dart';
 import 'home_screen.dart';
 import '../widgets/custom_text_field.dart';
@@ -25,13 +26,14 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Center(child:Image.asset(AppConfig.logoPath)),
+              Center(child:const Text(
                 "Welcome",
                 style: TextStyle(
                   fontSize: 32,
                   fontWeight: FontWeight.bold,
                 ),
-              ),
+              )),
               const SizedBox(height: 8),
               const Text(
                 "Please enter your credentials below to access your account.",
